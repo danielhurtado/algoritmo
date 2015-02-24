@@ -1,0 +1,35 @@
+# algoritmo// sdfsf.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+
+using namespace std;
+
+float serie (float X, int N);
+int FAC (int a);
+void main()
+
+{float a, b, c, d, e, f, g, x, y;
+
+cout<<"ingrese a: ";
+cin>>a;
+cout<<"ingrese b: ";
+cin>>b;
+cout<<"ingrese c: ";
+cin>>c;
+cout<<"ingrese d: ";
+cin>>d;
+cout<<"ingrese e: ";
+cin>>e;
+cout<<"ingrese f: ";
+cin>>f;
+y=(d*c-a*f) / (d*f- a*e);
+x=(c-b*y)/a;
+cout<<"x= "<<x<<end;
+cout<<"y="<<y<<end;
+getch;
+}
