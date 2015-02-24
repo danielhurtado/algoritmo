@@ -1,0 +1,44 @@
+// sdfsf.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+
+using namespace std;
+
+float serie (float X, int N);
+int FAC (int a);
+void main()
+
+{int X, N;
+float Total;
+cout << "ingrese N; ";
+cin >> N;
+cout << "ingrese x; ";
+cin >> X;
+Total= serie (X,N);
+cout << "La sumatoria total es: ";
+cout << Total;
+getch();
+}
+
+float serie (float X, int N)
+{float sig, s, i;// s es mi acumulador
+sig=1;
+s=0;
+for(i=1; i<=N; i++)
+{s=s+sig*pow(X,i)/FAC(i);
+sig=sig*(-1);
+}return (s);
+}
+
+int FAC (int a)
+{int b=1;
+for(int i=1; i<=a;i++)
+	b=b*i;
+return (b);
+}
+
