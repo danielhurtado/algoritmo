@@ -1,0 +1,52 @@
+#include "stdafx.h"
+#include <conio.h>
+#include "math.h"
+#include <iostream>
+#define TAM 100
+
+using namespace std;
+
+void cargarvector (float salariobruto[], int n);
+void calcularsalarioneto(float salarioneto[], float salariobruto[], int n );
+float promedio (float salarioneto[], int n); 
+void planilla(float salariobruto[], float salarioneto[], float promedio, int n);
+
+void main ()
+{    int n; 
+	 float sb[TAM], sn[TAM], p;
+	cout << "ingrese el numero de empleados: ";
+	cin >> n;
+	cargarvector (sb, n);
+	calcularsalarioneto(sn, sb, n);
+	p=promedio(sn, n);
+	planilla (sb, sn, p, n);
+	getch();
+	
+}
+
+void cargarvector (float salariobruto[], int n)
+{
+	for (int i=1; i<=n; i++)
+	{ cout<<"ingrese salario bruto: ";
+	    cin>> salariobruto[i];
+	}
+}
+
+void calcularsalarioneto(float salarioneto[], float salariobruto[], int n )
+{
+	for(int i=1; i<=n; i++)
+	{ 
+		salarioneto [i]= salariobruto[i] - (salariobruto[i]*0.251);
+	}
+}
+
+	float promedio (float salarioneto[], int n)
+	{float z=0;
+	
+		for(int i=1; i<=n; i++)
+			z=z+salarioneto[i];
+		return (z);
+	}
+void planilla(float salariobruto[], float salarioneto[], float promedio, int n)
+{
+}
